@@ -1,0 +1,36 @@
+name: doc
+
+on:
+  push:
+    paths:
+      - "README.md"
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  docs:
+    env:
+      DOC_FOLDER: "doc"
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: panvimdoc
+        uses: kdheepak/panvimdoc@main
+        with:
+          vimdoc: telescope-diff.nvim
+          version: "Neovim >= 0.8.0"
+          demojify: true
+          treesitter: true
+      - name: Commit and push changes
+        shell: bash
+        run: |
+          set -euo
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          if [[ -n $(git status -s -- $DOC_FOLDER) ]]; then
+            git add $DOC_FOLDER
+            git commit -m "ci: update vimdoc"
+            git push
+          fi
