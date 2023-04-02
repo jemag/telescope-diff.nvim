@@ -4,7 +4,6 @@
 Table of Contents                      *telescope-diff.nvim-table-of-contents*
 
 1. Telescope-diff.nvim               |telescope-diff.nvim-telescope-diff.nvim|
-  - Preview                  |telescope-diff.nvim-telescope-diff.nvim-preview|
   - Features                |telescope-diff.nvim-telescope-diff.nvim-features|
   - Installation        |telescope-diff.nvim-telescope-diff.nvim-installation|
 
@@ -12,12 +11,6 @@ Table of Contents                      *telescope-diff.nvim-table-of-contents*
 1. Telescope-diff.nvim               *telescope-diff.nvim-telescope-diff.nvim*
 
 Quick file diffs with the power of Telescope.nvim.
-
-
-PREVIEW                      *telescope-diff.nvim-telescope-diff.nvim-preview*
-
-
-https://user-images.githubusercontent.com/7985687/228704123-6a83446f-4172-48cc-99c8-95e48a127171.mp4
 
 
 FEATURES                    *telescope-diff.nvim-telescope-diff.nvim-features*
