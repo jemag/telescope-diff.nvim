@@ -1,9 +1,14 @@
 # Telescope-diff.nvim
+
 Quick file diffs with the power of Telescope.nvim.
+
+<!-- panvimdoc-ignore-start -->
 
 ## Preview
 
 https://user-images.githubusercontent.com/7985687/228704123-6a83446f-4172-48cc-99c8-95e48a127171.mp4
+
+<!-- panvimdoc-ignore-end -->
 
 ## Features
 
