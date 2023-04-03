@@ -1,11 +1,11 @@
-*telescope-diff.nvim.txt*    For Neovim >= 0.8.0    Last change: 2023 April 02
+*telescope-diff.nvim.txt*    For Neovim >= 0.8.0    Last change: 2023 April 03
 
 ==============================================================================
 Table of Contents                      *telescope-diff.nvim-table-of-contents*
 
 1. Telescope-diff.nvim               |telescope-diff.nvim-telescope-diff.nvim|
-  - Features                |telescope-diff.nvim-telescope-diff.nvim-features|
-  - Installation        |telescope-diff.nvim-telescope-diff.nvim-installation|
+  - Features                                    |telescope-diff.nvim-features|
+  - Installation                            |telescope-diff.nvim-installation|
 
 ==============================================================================
 1. Telescope-diff.nvim               *telescope-diff.nvim-telescope-diff.nvim*
@@ -13,14 +13,14 @@ Table of Contents                      *telescope-diff.nvim-table-of-contents*
 Quick file diffs with the power of Telescope.nvim.
 
 
-FEATURES                    *telescope-diff.nvim-telescope-diff.nvim-features*
+FEATURES                                        *telescope-diff.nvim-features*
 
 
 - Diff current file with a file picked from Telescope
 - Diff 2 files picked from Telescope
 
 
-INSTALLATION            *telescope-diff.nvim-telescope-diff.nvim-installation*
+INSTALLATION                                *telescope-diff.nvim-installation*
 
 With Lazy.nvim <https://github.com/folke/lazy.nvim>
 
