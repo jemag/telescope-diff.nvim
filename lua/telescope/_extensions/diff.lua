@@ -55,6 +55,14 @@ local function diff_current(opts)
   builtin.find_files(opts)
 end
 
+vim.api.nvim_create_user_command("DiffCurrent", function()
+  require("telescope").extensions.diff.diff_current({ hidden = true })
+end, {})
+
+vim.api.nvim_create_user_command("DiffFiles", function()
+  require("telescope").extensions.diff.diff_files({ hidden = true })
+end, {})
+
 return require("telescope").register_extension({
   exports = {
     diff_files = diff_files,
