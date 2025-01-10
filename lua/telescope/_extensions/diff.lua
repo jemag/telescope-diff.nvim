@@ -6,6 +6,7 @@ local function split_files(first_file, second_file)
   vim.cmd.tabnew(first_file)
   vim.cmd("vertical diffsplit " .. second_file)
   vim.cmd.normal({ args = { "gg" }, bang = true })
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
 end
 
 local function diff_files(opts)
