@@ -14,13 +14,13 @@ local function diff_files(opts)
   local outer_opts = {
     prompt_title = "Pick first file",
     attach_mappings = function(_, map)
-      map("i", "<CR>", function(prompt_bufnr)
+      map({ "i", "n" }, "<CR>", function(prompt_bufnr)
         actions.close(prompt_bufnr)
         local selection = action_state.get_selected_entry()
         local inner_opts = {
           prompt_title = "Pick second file",
           attach_mappings = function(_, inner_map)
-            inner_map("i", "<CR>", function(second_prompt_bufnr)
+            inner_map({ "i", "n" }, "<CR>", function(second_prompt_bufnr)
               actions.close(second_prompt_bufnr)
               local second_selection = action_state.get_selected_entry()
               split_files(selection.path, second_selection.path)
@@ -43,7 +43,7 @@ local function diff_current(opts)
   local local_opts = {
     prompt_title = "Pick file to compare",
     attach_mappings = function(_, map)
-      map("i", "<CR>", function(prompt_bufnr)
+      map({ "i", "n" }, "<CR>", function(prompt_bufnr)
         actions.close(prompt_bufnr)
         local current_filepath = vim.fn.expand(vim.api.nvim_buf_get_name(opts.bufnr))
         local selection = action_state.get_selected_entry()
